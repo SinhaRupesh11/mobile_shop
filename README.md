@@ -129,7 +129,7 @@ const EmiPlanSchema = new mongoose.Schema({
   cashback: Number
 });
 🔗 Live Demo
-👉 [Insert your Vercel / Render link here]
+👉 https://mobile-shop-orcin.vercel.app/
 
 📌 Notes
 EMI monthly payment is calculated on the frontend.
