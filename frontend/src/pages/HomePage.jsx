@@ -64,7 +64,6 @@ const HomePage = () => {
     useEffect(() => {
         const fetchProducts = async () => {
             try {
-                // Ensure backend is running and the route /api/products is active
                 const response = await axios.get(`${API_BASE_URL}/api/products`);
                 setProducts(response.data);
                 setLoading(false);
@@ -97,7 +96,7 @@ const HomePage = () => {
                         ? product.variants[0]
                         : null;
 
-                    // Skip rendering if essential data is missing (e.g., no variants)
+                    // Skip rendering if essential data is missing 
                     if (!firstVariant) return null; 
 
                     return (
@@ -114,7 +113,7 @@ const HomePage = () => {
                             <h2 className="text-2xl font-semibold">{product.name}</h2>
                             <p className="text-gray-500">{firstVariant.storage}</p>
                             
-                            {/* 🔥 Corrected Price Access: Accesses price from firstVariant */}
+                            {/*  Accesses price from firstVariant */}
                             <p className="text-3xl font-bold mt-2">
                                 {/* Use optional chaining on price and fallback to ensure toLocaleString is never undefined */}
                                 ₹{firstVariant.price?.toLocaleString('en-IN') || '0'}

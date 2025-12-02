@@ -1,4 +1,4 @@
-// backend/controllers/ProductController.js
+
 const Product = require('../models/ProductModel');
 
 // Get product details by slug

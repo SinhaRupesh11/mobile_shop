@@ -1,4 +1,4 @@
-// backend/server.js
+
 require('dotenv').config({ path: './.env' });
 const express = require('express');
 const connectDB = require('./config/db');
@@ -11,7 +11,7 @@ const app = express();
 app.use(cors()); // Allow frontend to access the API
 app.use(express.json());
 
-// API endpoint for products [cite: 42]
+// API endpoint for products 
 app.use('/api/products', productRoutes);
 
 app.get('/', (req, res) => {
