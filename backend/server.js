@@ -14,5 +14,9 @@ app.use(express.json());
 // API endpoint for products [cite: 42]
 app.use('/api/products', productRoutes);
 
+app.get('/', (req, res) => {
+    res.send('Fix Buddy API is running successfully!');
+});
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
